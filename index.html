@@ -4,16 +4,18 @@
 	<meta charset="utf-8">
 	<script>
 		function setSearchEngine() {
-			
+			console.log("Search Engine Set to:");
 
 			// TODO: create a handler
-			window.addEventListener("load", function () {
-				// TODO: register the handler
-				element.getAttribute("searchForm")
-				
-
-			})
 		};
+		window.addEventListener("load", function () {
+			// TODO: register the handler
+			let form = document.getElementById("searchForm");
+			form.addEventListener("submit", setSearchEngine);
+
+		})
+
+
 	</script>
 </head>
 
@@ -25,8 +27,9 @@
 		<label>DuckDuckGo<input type="radio" name="engine" value="duckDuckGo" /></label>
 		<label>Bing<input type="radio" name="engine" value="bing" /></label>
 		<label>Ask<input type="radio" name="engine" value="ask" /></label>
-		<button>GO!</button>
+		<input type="submit" value="go">
+		
 		<!-- TODO: add form elements -->
 	</form>
-	console.log("Search Engine Set to:");
+
 </body>
