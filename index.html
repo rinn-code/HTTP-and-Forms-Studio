@@ -3,22 +3,30 @@
 <head>
 	<meta charset="utf-8">
 	<script>
-		// TODO: create a handler
-    window.addEventListener("load", function(){
-        // TODO: register the handler
-    });
+		function setSearchEngine() {
+			console.log("Search Engine Set to:", setSearchEngine());
+
+			// TODO: create a handler
+			window.addEventListener("load", function () {
+				// TODO: register the handler
+				element.getAttribute("searchForm")
+				
+
+			})
+		};
 	</script>
 </head>
 
 <body>
 
 	<form id="searchForm">
-		<label>Label<input type="text" name="q"></label>
-		<label>Google<input type="radio" name="engine" value="google"/></label>
-    	<label>DuckDuckGo<input type="radio" name="engine" value="duckDuckGo"/></label>
-    	<label>Bing<input type="radio" name="engine" value="bing"/></label>
-		<label>Ask<input type="radio" name="engine" value="ask"/></label>
-    <!-- TODO: add form elements -->
+		<label>What you wanna know? <input type="text" name="q"></label>
+		<label>Google<input type="radio" name="engine" value="google" /></label>
+		<label>DuckDuckGo<input type="radio" name="engine" value="duckDuckGo" /></label>
+		<label>Bing<input type="radio" name="engine" value="bing" /></label>
+		<label>Ask<input type="radio" name="engine" value="ask" /></label>
+		<button>GO!</button>
+		<!-- TODO: add form elements -->
 	</form>
 
 </body>
