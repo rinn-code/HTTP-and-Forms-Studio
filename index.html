@@ -4,6 +4,20 @@
 	<meta charset="utf-8">
 	<script>
 		function setSearchEngine() {
+
+			let actions = {
+				"google": "https://google.com/search",
+				"duckduckgo": "https://duckduckgo.com",
+				"bing": "https://www.bing.com/search/",
+				"ask": "https://www.ask.com/web"
+			};
+
+			let form = document.getElementById('searchForm');
+			let selectedEngine = document.querySelector('input[name=engine]:checked');
+			let action = actions[selectedEngine.value];
+			form.setAttribute('action', action);
+		}
+		function setSearchEngine() {
 			console.log("Search Engine Set to:");
 
 			// TODO: create a handler
@@ -28,7 +42,7 @@
 		<label>Bing<input type="radio" name="engine" value="bing" /></label>
 		<label>Ask<input type="radio" name="engine" value="ask" /></label>
 		<input type="submit" value="go">
-		
+
 		<!-- TODO: add form elements -->
 	</form>
 
